@@ -22,6 +22,7 @@ export async function GET(request: NextRequest) {
       { id: decoded.id, email: decoded.email },
       { status: 200 }
     );
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     return NextResponse.json({ error: "Token không hợp lệ" }, { status: 401 });
   }
